@@ -1,2 +1,19 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container">
+
+<h1>Current Board Listing</h1>
+
+<ul>
+
+
+    {{#each data}}
+        <li>
+            <h3><a href="/snowboard/{{this.id}}">{{this.make}}</a></h3>
+        </li>
+        <hr>
+    {{/each}}
+
+</ul>
+
+<!-- <a href="/new"> Add New</a> -->
+<a href="/new" class="waves-effect waves-light btn-large"> Add New!</a>
+</div>

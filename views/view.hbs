@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Board Details</h1>
+
+    <ul>
+
+        {{#each data}}
+            <li>
+                <p>Company: {{this.make}}</p>
+                <p>MODEL: {{this.model}}</p>
+                <p>SIZE: {{this.size}}</p>
+                <p>PRICE: {{this.price}}</p>
+                <p>FLEXABILITY: {{this.flex}}</p>
+            </li>
+
+    </ul>
+    <a href="/snowboard" class="waves-effect waves-light btn-large"> Back To List</a>
+    <!-- <form class="delete-button" action="/snowboard{{this.id}}" method="post">
+      <button class="waves-effect waves-light btn-large" type="submit" name="delete-button"> Delete</button>
+  </form>  -->
+    <form class="delete-button" action="/snowboard/{{this.id}}?_method=DELETE" method="post">
+        <button class="waves-effect waves-light btn-large" type="submit" name="delete-button"> Delete</button>
+    </form>
+    <!-- <a href="/snowboard{{snowboard.id}}/delete" class="waves-effect waves-light btn-large"> Delete</a> -->
+    {{/each}}
+</div>

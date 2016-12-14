@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-  return knex.raw('TRUNCATE snowboard; ALTER SEQUENCE snowboard_id_seq restart with 1;')
+  return knex.raw('TRUNCATE snowboard; ALTER SEQUENCE snowboard_id_seq restart with 11;')
     .then(function () {
       const snowboards = [{
         make:'Libtech',
