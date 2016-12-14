@@ -6,8 +6,9 @@
 
 
     {{#each data}}
-        <li>
-            <h3><a href="/snowboard/{{this.id}}">{{this.make}}</a></h3>
+
+        <li class ="col s6">
+            <h3><a href="/snowboard/{{this.id}}">{{this.make}}: {{this.model}}</a></h3>
         </li>
         <hr>
     {{/each}}

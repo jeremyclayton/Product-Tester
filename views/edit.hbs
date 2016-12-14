@@ -1,0 +1,48 @@
+<h1>Edit Current Board </h1>
+
+    <h1>Board Details</h1>
+
+    <ul>
+
+        {{#each data}}
+            <li>
+                <p>Company: {{this.make}}</p>
+                <p>MODEL: {{this.model}}</p>
+                <p>SIZE: {{this.size}}</p>
+                <p>PRICE: {{this.price}}</p>
+                <p>FLEXABILITY: {{this.flex}}</p>
+            </li>
+
+    </ul>
+
+
+<!-- //"/snowboard/{{this.id}}?_method=DELETE" -->
+<div class="row">
+    <form class="col s12" action="/snowboard/{{this.id}}?_method=PUT" method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          <input value ="{{thiis.id}}" placeholder="Make" id="make" type="text"  name="make">
+
+        </div>
+        <div class="input-field col s6">
+          <input value ="{{thiis.id}}"  placeholder="Model"  id="model" type="text"  name="model">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input value ="{{thiis.id}}" placeholder="size" id="size" type="integer" name="size">
+        </div>
+        <div class="input-field col s4">
+          <input value ="{{thiis.id}}" placeholder="price" id="price" type="integer" name="price">
+        </div>
+        <div class="input-field col s4">
+          <input value ="{{thiis.id}}" placeholder="flex" id="flex" type="integer" name="flex">
+        </div>
+      </div>
+ <button class="waves-effect waves-light btn-large" type="submit" name="edit-button"> Edit</button>
+ <a href="/snowboard" class="waves-effect waves-light btn-large"> Back To List</a>
+    </form>
+  </div>
+
+    {{/each}}
